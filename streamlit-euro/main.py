@@ -5,10 +5,10 @@ import pandas as pd
 
 from mplsoccer import VerticalPitch
 
-st.title("streamlit-euro/Euro 2024 Shot map")
+st.title("Euro 2024 Shot map")
 st.subheader("Filter to any team/player to see all of their shots taken!")
 
-df = pd.read_csv("euros_2024_shot_map.csv")
+df = pd.read_csv("streamlit-euro/euros_2024_shot_map.csv")
 df = df[df['type'] == 'Shot'].reset_index(drop=True)
 df['location'] = df['location'].apply(json.loads)
 
